@@ -34,14 +34,15 @@ $page_support	= $override_support ?: $global_support;
 
 
 			<?php if($page_footer['show_contact'] && $global_contact) { ?>
-				<div class="uk-width-1-2@m uk-width-auto@l">
+				<div class="uk-width-1-4@m">
+                    <h3>Kontakt</h3>
 					<div class="footer-item footer-contact">
 						<?php include 'tpl/partials/contact.php'; ?>
 					</div>
 				</div>
 			<?php } ?>
 
-
+            <!--
 			<?php if($page_footer['footer_text']) { ?>
 				<div class="uk-width-1-2@m uk-width-1-3@l">
 					<div class="footer-item footer-text">
@@ -49,25 +50,34 @@ $page_support	= $override_support ?: $global_support;
 					</div>
 				</div>
 			<?php } ?>
+			-->
+
+            <div class="uk-width-1-4@m">
+                <?php if($page_footer['show_socialmedia'] && $global_social) { ?>
+                        <h3>Social Media</h3>
+                    <div><div class="footer-item footer-social">
+                            <?php $social_profiles = $global_social;
+                            include 'tpl/partials/social.php'; ?>
+                        </div></div>
+                <?php } ?>
+            </div>
+
+            <div class="uk-width-1-4@m">
+                <?php if(has_nav_menu('footer')) { ?>
+                    <h3>Sitemap</h3>
+                    <div><div class="footer-item footer-menu">
+                            <?php wp_nav_menu(array('theme_location' => 'footer', 'container' => false, 'fallback_cb' => false)); ?>
+                        </div></div>
+                <?php } ?>
+            </div>
 
 
-			<div class="uk-width-auto@l uk-text-right@l">
+			<div class="uk-width-1-5@m uk-width-1-2">
 				<?php if($page_footer['show_logo'] && $page_logos) { ?>
 					<div class="footer-item footer-logo">
 						<?php include_once 'tpl/partials/logo-function.php'; ?>
 						<?php include 'tpl/partials/logo.php'; ?>
 					</div>
-				<?php } ?>
-				<?php if(has_nav_menu('footer')) { ?>
-					<div><div class="footer-item footer-menu">
-						<?php wp_nav_menu(array('theme_location' => 'footer', 'container' => false, 'fallback_cb' => false)); ?>
-					</div></div>
-				<?php } ?>
-				<?php if($page_footer['show_socialmedia'] && $global_social) { ?>
-					<div><div class="footer-item footer-social">
-						<?php $social_profiles = $global_social;
-						include 'tpl/partials/social.php'; ?>
-					</div></div>
 				<?php } ?>
 			</div>
 
@@ -80,6 +90,8 @@ $page_support	= $override_support ?: $global_support;
 include 'tpl/partials/offcanvas.php';
 wp_footer() ;
 ?>
+
+</div>
 
 </body>
 </html>

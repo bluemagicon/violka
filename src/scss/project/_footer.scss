@@ -1,9 +1,17 @@
 .footer {
-    @include w-block-padding-y();
+    padding: 35px 0;
+    color: #fff;
+    background: $w-color-primary;
     box-shadow: $w-def-box-shadow;
 
-    //background: $w-color-dark;
-    //color: $w-color-white;
+    .footer-logo{
+        svg{
+            fill: #ffffff;
+            path{
+                fill: #ffffff;
+            }
+        }
+    }
 
     &-inner {
         @extend .alignwide;
@@ -68,6 +76,12 @@
             @extend .w-list;
             @extend .w-list--inline;
             font-size: $w-font-size-small;
+            li{
+                width: 100%;
+                a{
+
+                }
+            }
         }
     }
 }

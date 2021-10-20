@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "WordPress Base-Theme from braveandwray",
   "main": "gulpfile.js",
+  "type": "module",
   "scripts": {
     "postinstall": "npm run updateLinks",
     "updateLinks": "node ./_update-dependencies.js"

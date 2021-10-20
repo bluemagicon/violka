@@ -286,7 +286,7 @@ function baw_login_stylesheet() {
 // FRONTEND FILES
 //
 
-add_action('wp_enqueue_scripts', 'baw_enqueue_scripts', 30);
+add_action('wp_enqueue_scripts', 'baw_enqueue_scripts', 10);
 function baw_enqueue_scripts()
 {
     if ( ! is_admin() ) {

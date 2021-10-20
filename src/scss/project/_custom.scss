@@ -1,0 +1,118 @@
+//Global
+body{
+  background-image: url('../../img/body-bg.jpg');
+}
+main{
+  background-color: #fff;
+}
+#page-wrapper{
+  max-width: 1600px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+//Custom Gutenberg Overrides
+.wp-block-image .aligncenter{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+//Custom Group-Styles
+.wp-block-group.is-style-mainteaser{
+  overflow-x: hidden;
+  margin-top: 0;
+  margin-bottom: 0;
+  .wp-block-group__inner-container{
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  p{
+    max-width: 550px;
+  }
+  .ghostkit-carousel{
+    margin: 0 !important;
+    position: relative;
+    .ghostkit-carousel-slide{
+      width: 100% !important;
+      .nk-awb{
+        min-height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 8%;
+      }
+    }
+    /*
+    &::after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 128px;
+      background-image: url('../../img/violka-welle.png');
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 1600px auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+    */
+  }
+}
+
+//Custom Icon-Box Styles
+.ghostkit-icon-box{
+  align-items: flex-start;
+  .ghostkit-icon-box-icon{
+    margin-top: .5rem;
+  }
+}
+
+//CUSTOM NK/AWB-Styles
+.is-style-75vh{
+  min-height: 75vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1,h2,h3,h4,h5,h6{
+    margin-bottom: 0 !important;
+  }
+}
+.is-style-50vh{
+  min-height: 50vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1,h2,h3,h4,h5,h6{
+    margin-bottom: 0 !important;
+  }
+}
+
+//Custom Grid-Styling
+.is-style-welle{
+  border-radius: 3px;
+  overflow: hidden;
+  h1,h2,h3,h4,h5,h6{
+    margin-top: -10px;
+    z-index: 1;
+    position: relative;
+  }
+  .wp-block-image{
+    position: relative;
+    &::after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 43px;
+      background-image: url('../../img/violka-welle.png');
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-size: 525px auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

@@ -126,6 +126,10 @@ wp.blocks.registerBlockStyle( 'core/heading', {
 	name: 'h6',
 	label: 'H6-Optik'
 } );
+wp.blocks.registerBlockStyle( 'core/heading', {
+	name: 'subheadline',
+	label: 'Subheadline'
+} );
 
 
 
@@ -163,4 +167,31 @@ wp.blocks.registerBlockStyle( 'core/paragraph', {
 wp.blocks.registerBlockStyle( 'core/paragraph', {
 	name: 'h6',
 	label: 'H6-Optik'
+} );
+wp.blocks.registerBlockStyle( 'core/paragraph', {
+	name: 'text-narrow',
+	label: 'Schmaler Text'
+} );
+
+
+//core/group
+wp.blocks.registerBlockStyle( 'core/group', {
+	name: 'mainteaser',
+	label: 'Mainteaser'
+} );
+
+//nk/awb
+wp.blocks.registerBlockStyle( 'nk/awb', {
+	name: '75vh',
+	label: '75vh'
+} );
+wp.blocks.registerBlockStyle( 'nk/awb', {
+	name: '50vh',
+	label: '50vh'
+} );
+
+//ghostkit/grid-column
+wp.blocks.registerBlockStyle( 'ghostkit/grid-column', {
+	name: 'welle',
+	label: 'Mit Welle'
 } );

@@ -87,18 +87,6 @@
                     width: 230px;
                 }
             }
-
-            path, polygon {
-                fill: w-color(dark);
-                transition: all .2s ease-in-out;
-            }
-
-            &:hover {
-
-                path, polygon {
-                    fill: w-color(primary);
-                }
-            }
         }
 
 
@@ -109,8 +97,8 @@
 
             a {
                 font-weight: bold;
+                font-size: 1.2em;
             }
-
             ul.sub-menu a {
                 font-weight: normal;
             }

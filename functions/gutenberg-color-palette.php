@@ -15,22 +15,22 @@ add_theme_support( 'editor-color-palette', array(
 	array(
 		'name'  => __( 'Primary', 'ea_genesis_child' ),
 		'slug'  => 'primary',
-		'color'	=> '#1d7d8c',
+		'color'	=> '#b31447',
 	),
 	array(
 		'name'  => __( 'Dark', 'ea_genesis_child' ),
 		'slug'  => 'dark',
-		'color' => '#181b1d',
+		'color' => '#353535',
 	),
 	array(
 		'name'	=> __( 'Medium', 'ea_genesis_child' ),
 		'slug'	=> 'medium',
-		'color'	=> '#6a7177',
+		'color'	=> '#988c7a',
 	),
 	array(
 		'name'  => __( 'Light', 'ea_genesis_child' ),
 		'slug'  => 'light',
-		'color' => '#ebeff1',
+		'color' => '#daa5ad',
 	),
 	array(
 		'name'	=> __( 'White', 'ea_genesis_child' ),
