@@ -11,6 +11,12 @@ if (function_exists('acf_add_options_page'))
         'position'      => '2.3',
         'redirect'      => false
     ));
+
+    acf_add_options_sub_page(array(
+        'page_title'  => 'Dialoge / Modals',
+        'menu_title'  => 'Dialoge / Modals',
+        'parent_slug' => 'bawoptions',
+    ));
 }
 
 ?>

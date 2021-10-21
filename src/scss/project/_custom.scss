@@ -30,18 +30,19 @@ main{
   p{
     max-width: 550px;
   }
+  .nk-awb{
+    margin-top: 0 !important;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8%;
+  }
   .ghostkit-carousel{
     margin: 0 !important;
     position: relative;
     .ghostkit-carousel-slide{
       width: 100% !important;
-      .nk-awb{
-        min-height: 700px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: 8%;
-      }
     }
     /*
     &::after{
@@ -90,17 +91,27 @@ main{
   }
 }
 
-//Custom Grid-Styling
-.is-style-welle{
+//Custom Grid- & Connector Styling
+.is-style-welle,
+.connector .type-angebot{
   border-radius: 3px;
+  text-align: center;
   overflow: hidden;
   h1,h2,h3,h4,h5,h6{
     margin-top: -10px;
     z-index: 1;
     position: relative;
   }
-  .wp-block-image{
+  p{
+    padding: 0 25px;
+  }
+  .post-content{
+    margin: 0;
+  }
+  .wp-block-image,
+  .post-image{
     position: relative;
+    margin-bottom: 0;
     &::after{
       content: '';
       display: block;
@@ -113,6 +124,17 @@ main{
       position: absolute;
       bottom: 0;
       left: 0;
+    }
+  }
+}
+.connector .type-angebot{
+  overflow: visible;
+  .post-inner{
+    padding-bottom: 30px;
+    &:hover{
+      img{
+        transform: none;
+      }
     }
   }
 }

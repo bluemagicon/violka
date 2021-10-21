@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "WordPress Base-Theme from braveandwray",
   "main": "gulpfile.js",
-  "type": "module",
   "scripts": {
     "postinstall": "npm run updateLinks",
     "updateLinks": "node ./_update-dependencies.js"
@@ -17,9 +16,9 @@
   "author": "Fynn Schodde, brave and wray GmbH",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
-    "@babel/register": "^7.4.0",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/register": "^7.15.3",
     "chalk": "^2.4.2",
     "gulp": "~4.0.1",
     "gulp-autoprefixer": "^3.1.0",
@@ -29,16 +28,16 @@
     "gulp-include": "^2.1.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.3"
+    "gulp-sass": "^4.1.1",
+    "gulp-sourcemaps": "^1.6.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "latest",
+    "gulp-uglify": "^3.0.2",
     "hamburgers": "latest",
     "hiraku": "latest",
     "scrollreveal": "latest",
-    "swiper": "latest",
+    "swiper": "^7.0.9",
     "uikit": "latest"
   },
   "browserslist": [
