@@ -40,6 +40,10 @@
       top: 8.4px;
       left: 0;
       transform: translateY(-100%);
+      @media(max-width: $w-breakpoint-small){
+        background-size: 500px auto;
+        top: 5px;
+      }
     }
   }
 }
