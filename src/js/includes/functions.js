@@ -24,7 +24,7 @@ function myFunction() {
 var offcanvas = new Hiraku(".offcanvas", {
     btn: "#offcanvas-trigger",
     fixedHeader: "#header",
-    width: '50%',
+    width: '70%',
     direction: "right"
 });
 offcanvas.on('open', function(){

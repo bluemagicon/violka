@@ -31,9 +31,8 @@ $page_support	= $override_support ?: $global_support;
 <footer class="footer">
 	<div class="footer-inner">
 		<div class="uk-grid uk-grid-large uk-flex-between">
-
 			<?php if($page_footer['show_contact'] && $global_contact) { ?>
-				<div class="uk-width-1-4@m">
+				<div class="uk-width-1-4@m uk-width-1-2@s">
                     <h3>Kontakt</h3>
 					<div class="footer-item footer-contact">
 						<?php include 'tpl/partials/contact.php'; ?>
@@ -50,7 +49,7 @@ $page_support	= $override_support ?: $global_support;
             ?>
             <?php if($query_filialen->have_posts()){ ?>
                 <?php while($query_filialen->have_posts()) : $query_filialen->the_post(); ?>
-                    <div class="uk-width-1-4@m">
+                    <div class="uk-width-1-4@m uk-width-1-2@s">
                         <h3><?php the_title(); ?></h3>
                         <?php echo get_field('anschrift-kontakt'); ?>
                     </div>
@@ -58,7 +57,7 @@ $page_support	= $override_support ?: $global_support;
             <?php } ?>
 
             <?php if($page_footer['show_socialmedia'] && $global_social) { ?>
-                <div class="uk-width-1-4@m">
+                <div class="uk-width-1-4@m uk-width-1-2@s">
                     <h3>Social Media</h3>
                     <div>
                         <div class="footer-item footer-social">
