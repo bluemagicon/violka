@@ -32,7 +32,6 @@ $page_support	= $override_support ?: $global_support;
 	<div class="footer-inner">
 		<div class="uk-grid uk-grid-large uk-flex-between">
 
-
 			<?php if($page_footer['show_contact'] && $global_contact) { ?>
 				<div class="uk-width-1-4@m">
                     <h3>Kontakt</h3>
@@ -42,48 +41,54 @@ $page_support	= $override_support ?: $global_support;
 				</div>
 			<?php } ?>
 
-            <!--
-			<?php if($page_footer['footer_text']) { ?>
-				<div class="uk-width-1-2@m uk-width-1-3@l">
-					<div class="footer-item footer-text">
-						<?= $global_footer['footer_text'] ?>
-					</div>
-				</div>
-			<?php } ?>
-			-->
+            <?php
+                $args = array(
+                    'post_type' => 'filiale',
+                    'order'   => 'ASC',
+                );
+                $query_filialen = new WP_Query( $args );
+            ?>
+            <?php if($query_filialen->have_posts()){ ?>
+                <?php while($query_filialen->have_posts()) : $query_filialen->the_post(); ?>
+                    <div class="uk-width-1-4@m">
+                        <h3><?php the_title(); ?></h3>
+                        <?php echo get_field('anschrift-kontakt'); ?>
+                    </div>
+                <?php endwhile; ?>
+            <?php } ?>
 
-            <div class="uk-width-1-4@m">
-                <?php if($page_footer['show_socialmedia'] && $global_social) { ?>
-                        <h3>Social Media</h3>
-                    <div><div class="footer-item footer-social">
+            <?php if($page_footer['show_socialmedia'] && $global_social) { ?>
+                <div class="uk-width-1-4@m">
+                    <h3>Social Media</h3>
+                    <div>
+                        <div class="footer-item footer-social">
                             <?php $social_profiles = $global_social;
                             include 'tpl/partials/social.php'; ?>
-                        </div></div>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+		</div>
+	</div>
+    <div class="meta-footer">
+        <div class="alignwide uk-flex uk-flex-between uk-flex-middle">
+            <div class="uk-width-1-2">
+                <?php if($page_footer['show_logo'] && $page_logos) { ?>
+                    <div class="footer-item footer-logo">
+                        <?php include_once 'tpl/partials/logo-function.php'; ?>
+                        <?php include 'tpl/partials/logo.php'; ?>
+                    </div>
                 <?php } ?>
             </div>
-
-            <div class="uk-width-1-4@m">
+            <div class="uk-width-1-2">
                 <?php if(has_nav_menu('footer')) { ?>
-                    <h3>Sitemap</h3>
                     <div><div class="footer-item footer-menu">
                             <?php wp_nav_menu(array('theme_location' => 'footer', 'container' => false, 'fallback_cb' => false)); ?>
                         </div></div>
                 <?php } ?>
             </div>
-
-
-			<div class="uk-width-1-5@m uk-width-1-2">
-				<?php if($page_footer['show_logo'] && $page_logos) { ?>
-					<div class="footer-item footer-logo">
-						<?php include_once 'tpl/partials/logo-function.php'; ?>
-						<?php include 'tpl/partials/logo.php'; ?>
-					</div>
-				<?php } ?>
-			</div>
-
-
-		</div>
-	</div>
+        </div>
+    </div>
 </footer>
 
 <?php

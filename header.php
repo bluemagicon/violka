@@ -83,4 +83,64 @@ $page_header	= $override_header ?: $global_header;
 		</div>
 	</header>
 
+    <div class="fixed-sidebar">
+        <ul>
+            <?php while(have_rows('popup', 'option')) : the_row(); ?>
+                <li>
+                    <button uk-toggle="target: #modal-<?php echo get_sub_field('id'); ?>" type="button">
+                        <?php
+                            $icon = get_sub_field('icon');
+                            echo baw_svg($icon);
+                        ?>
+                    </button>
+                    <label><?php echo get_sub_field('label'); ?></label>
+                </li>
+            <?php endwhile; ?>
+            <?php if(have_rows('group_popup_filialen', 'option')) : the_row(); ?>
+                <li>
+                    <button uk-toggle="target: #modal-adressen" type="button">
+                        <?php echo baw_svg('solid/map'); ?>
+                    </button>
+                    <label><?php echo get_sub_field('label'); ?></label>
+                </li>
+            <?php endif; ?>
+        </ul>
+    </div>
 
+
+    <?php while(have_rows('popup', 'option')) : the_row(); ?>
+        <div id="modal-<?php echo get_sub_field('id'); ?>" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+                <button class="uk-modal-close" type="button">Schließen</button>
+                <?php echo get_sub_field('inhalt'); ?>
+            </div>
+        </div>
+    <?php endwhile; ?>
+
+    <div id="modal-adressen" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            <button class="uk-modal-close" type="button">Schließen</button>
+            <?php echo get_sub_field('inhalt'); ?>
+            <div uk-grid>
+                <?php
+                $args = array(
+                    'post_type' => 'filiale',
+                    'order'   => 'ASC',
+                );
+                $query_filialen = new WP_Query( $args );
+                ?>
+                <?php if($query_filialen->have_posts()){ ?>
+                    <?php while($query_filialen->have_posts()) : $query_filialen->the_post(); ?>
+                        <div class="uk-width-1-2@m adress-block">
+                            <div>
+                                <h3><?php the_title(); ?></h3>
+                                <?php echo get_field('anschrift-kontakt'); ?>
+                                <?php echo get_field('offnungszeiten'); ?>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                <?php } ?>
+                <?php wp_reset_query(); ?>
+            </div>
+        </div>
+    </div>
