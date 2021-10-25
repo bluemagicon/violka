@@ -2,6 +2,9 @@
 body{
   background-image: url('../../img/body-bg.jpg');
 }
+main{
+  background-color: #fff;
+}
 #page-wrapper{
   max-width: 1920px;
   width: 100%;
@@ -11,6 +14,7 @@ body{
     padding: 0;
   }
 }
+
 
 //Custom Gutenberg Overrides
 .wp-block-image .aligncenter{
