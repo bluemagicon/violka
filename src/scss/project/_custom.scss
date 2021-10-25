@@ -4,6 +4,7 @@ body{
 }
 main{
   background-color: #fff;
+  overflow-x: hidden;
 }
 #page-wrapper{
   max-width: 1920px;
@@ -13,9 +14,6 @@ main{
   @media(max-width: $w-breakpoint-medium){
     padding: 0;
   }
-}
-.wp-block-group{
-  overflow: hidden;
 }
 
 //Custom Gutenberg Overrides
