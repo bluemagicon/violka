@@ -14,6 +14,9 @@ main{
     padding: 0;
   }
 }
+.wp-block-group{
+  overflow-x: hidden;
+}
 
 //Custom Gutenberg Overrides
 .wp-block-image .aligncenter{
