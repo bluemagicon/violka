@@ -5,11 +5,12 @@
   margin-right: auto;
 }
 .is-style-subheadline{
-  font-size: 1em;
-  text-transform: uppercase;
+  font-size: 1.6em;
+  //text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: -1rem !important;
   font-family: 'Yellowtail';
+  font-weight: 500;
 }
 
 @media(max-width: $w-breakpoint-large){

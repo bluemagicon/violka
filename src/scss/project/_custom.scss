@@ -1,6 +1,14 @@
 //Global
 body{
   background-image: url('../../img/body-bg.jpg');
+  border-top: 5px solid $w-color-primary;
+  &::before{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: $w-color-light;
+  }
 }
 main{
   //background-color: #fff;
@@ -28,6 +36,7 @@ main{
   overflow-x: hidden;
   margin-top: 0;
   margin-bottom: 0;
+  position: relative;
   .wp-block-group__inner-container{
     margin: 0 !important;
     width: 100% !important;
