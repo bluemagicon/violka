@@ -1,6 +1,6 @@
 .header {
     transform: translateY(0) !important;
-
+    transition: all .3s;
 
     &--sticky,
     &--fixed {
@@ -20,7 +20,8 @@
     }
 
     &--scrolled {
-
+        background: $w-color-white;
+        box-shadow: $w-def-box-shadow;
         .header-inner {
             //padding: 1.2em 0;
         }
@@ -32,17 +33,17 @@
     // Inner Settings
 
     &-inner {
-        box-shadow: $w-def-box-shadow;
+        //box-shadow: $w-def-box-shadow;
         font-family: map-get($w-fonts, secondary);
-        background: $w-color-white;
+        //background: $w-color-white;
         font-weight: 500;
-        padding: 1.75em 0;
+        padding: 1.75em 1.5em;
     }
 
     &-container {
-        @extend .alignwide;
+        @extend .alignfull;
         justify-content: space-between;
-        background: $w-color-white;
+        //background: $w-color-white;
         align-items: center;
         display: flex;
     }

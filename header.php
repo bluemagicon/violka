@@ -52,7 +52,6 @@ $page_header	= $override_header ?: $global_header;
 
 <body <?php body_class('w-body'); ?>>
 <div id="page-wrapper">
-
 	<?php if($page_header['show_socialmedia'] && $global_social) { ?>
 		<div class="header-meta">
 			<div class="header-meta-inner">

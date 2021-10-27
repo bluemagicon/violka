@@ -8,7 +8,7 @@ var header = document.getElementById("header");
 var sticky = header.offsetTop;
 
 function myFunction() {
-  if (window.pageYOffset > sticky) {
+  if (window.pageYOffset > 10) {
     header.classList.add("header--scrolled");
   } else {
     header.classList.remove("header--scrolled");
