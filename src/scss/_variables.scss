@@ -14,10 +14,18 @@ $w-headline-font-weight: 900;
 $w-headline-line-height: 1.2;
 
 //BUTTON
-$w-button-padding-vertical: 0.9em;
+$w-button-background: #52ae32;
+$w-button-padding-vertical: 0.6em;
 $w-button-padding-horizontal: 1.6em;
 $w-button-border-radius: 3px;
 $w-button-font-weight: 600;
+$w-button-font-family: 'Yellowtail';
+$w-button-font-weight: normal;
+$w-button-font-size: 1.2;
+$w-button-background-hover: #45932a;
+
+//OFFCANVAS
+$w-offcanvas-link-text-transform: none;
 
 //DESIGN
 $w-def-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.15);
