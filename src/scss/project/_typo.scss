@@ -13,6 +13,12 @@
   font-weight: 500;
 }
 
+.angebot h3{
+  max-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media(max-width: $w-breakpoint-large){
   .ghostkit-button{
     display: inline-block;
