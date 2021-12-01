@@ -50,7 +50,7 @@ $page_support	= $override_support ?: $global_support;
             <?php if($query_filialen->have_posts()){ ?>
                 <?php while($query_filialen->have_posts()) : $query_filialen->the_post(); ?>
                     <div class="uk-width-1-4@m uk-width-1-2@s">
-                        <h3><?php the_title(); ?></h3>
+                        <strong class="is-style-h3"><?php the_title(); ?></strong>
                         <?php echo get_field('anschrift-kontakt'); ?>
                     </div>
                 <?php endwhile; ?>
@@ -58,7 +58,7 @@ $page_support	= $override_support ?: $global_support;
 
             <?php if($page_footer['show_socialmedia'] && $global_social) { ?>
                 <div class="uk-width-1-4@m uk-width-1-2@s">
-                    <h3>Social Media</h3>
+                    <strong class="is-style-h3">Social Media</strong>
                     <div>
                         <div class="footer-item footer-social">
                             <?php $social_profiles = $global_social;
