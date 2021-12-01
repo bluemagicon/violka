@@ -82,7 +82,7 @@ $page_header = $override_header ?: $global_header;
     <?php } ?>
 
 
-    <div class="fixed-sidebar">
+    <?php /* <div class="fixed-sidebar">
         <ul>
             <?php while (have_rows('popup', 'option')) : the_row(); ?>
                 <li>
@@ -104,7 +104,7 @@ $page_header = $override_header ?: $global_header;
                 </li>
             <?php endif; ?>
         </ul>
-    </div>
+    </div> */ ?>
 
 
     <?php while (have_rows('popup', 'option')) : the_row(); ?>
