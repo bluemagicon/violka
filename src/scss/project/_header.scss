@@ -1,3 +1,14 @@
+
+// WHATS-APP-BUTTON
+
+.whatsapp-button{
+    position: fixed;
+    z-index: 9999;
+    bottom: 5px;
+    right: 10px;
+    width: 50px;
+}
+
 // OFFCANVAS
 .offcanvas{
     text-align: center;
@@ -9,8 +20,6 @@
         }
     }
 }
-
-
 
 .header {
     transform: translateY(0) !important;

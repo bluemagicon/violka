@@ -52,6 +52,12 @@ $page_header = $override_header ?: $global_header;
 
 <body <?php body_class('w-body'); ?>>
 
+
+<a class="whatsapp-button uk-hidden@s" href="whatsapp://send?text=&phone=+491773184287">
+    <img src="<?= get_bloginfo('template_url') ?>/img/whatsapp-button.png" />
+</a>
+
+
 <header class="header header--sticky" id="header" role="banner">
     <div class="alignwide">
         <div class="header-inner">
