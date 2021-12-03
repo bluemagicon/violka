@@ -17,6 +17,9 @@
 
     &-inner {
         @extend .alignwide;
+        a{
+            text-decoration: underline;
+        }
     }
 
     &-item {
@@ -27,7 +30,6 @@
     a {
         color: inherit;
         position: relative;
-        text-decoration: underline;
         &:hover {
 
         }
