@@ -50,11 +50,11 @@
         background: $w-color-white;
         box-shadow: $w-def-box-shadow;
         .header-inner {
-            //padding: 1.2em 0;
+            //padding: 1.1em 0;
         }
         .header-item--logo svg{
             @media(min-width: $breakpoint-large) {
-                width: 180px;
+                width: 160px;
             }
         }
     }

@@ -8,12 +8,26 @@
     border-top: 0;
     .uk-modal-close{
       position: absolute;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 1.4em;
+      top: -60px;
+      right: 0;
+      font-size: 1.2em;
       font-weight: 900;
       z-index: 1;
+      background: #b31a47;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      border-radius: 50%;
+    }
+    .popup-logo{
+      position: relative;
+      width: 200px;
+      margin: -50px auto 20px auto;
+      z-index: 9999;
+      @media(max-width: $w-breakpoint-small){
+        width: 120px;
+        margin: -40px auto 10px auto;
+      }
     }
     .wp-block-group{
       margin-top: 0;

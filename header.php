@@ -116,7 +116,7 @@ $page_header = $override_header ?: $global_header;
     <?php while (have_rows('popup', 'option')) : the_row(); ?>
         <div id="modal-<?php echo get_sub_field('id'); ?>" uk-modal>
             <div class="uk-modal-dialog uk-modal-body">
-                <button class="uk-modal-close" type="button">Schließen</button>
+                <button class="uk-modal-close" type="button">X</button>
                 <?php echo get_sub_field('inhalt'); ?>
             </div>
         </div>
@@ -124,7 +124,7 @@ $page_header = $override_header ?: $global_header;
 
     <div id="modal-adressen" uk-modal>
         <div class="uk-modal-dialog uk-modal-body">
-            <button class="uk-modal-close" type="button">Schließen</button>
+            <button class="uk-modal-close" type="button">X</button>
             <?php echo get_sub_field('inhalt'); ?>
             <div uk-grid>
                 <?php

@@ -1,0 +1,114 @@
+.nav {
+  --w-submenu-color: #fff;
+  --w-submenu-bg: #{$w-color-primary};
+  font-size: .9em;
+
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: var(--w-color-primary);
+    }
+  }
+
+
+  ul {
+    @extend .w-list;
+
+    .current-menu-ancestor,
+    .current-page-ancestor,
+    .current-page-item,
+    .current-menu-item {
+
+      & > a, & > a:hover {
+        color: var(--w-color-primary);
+      }
+    }
+  }
+
+
+  > ul {
+
+    > li {
+      display: inline-block;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-right: 1em;
+      }
+
+      > a {
+        white-space: nowrap;
+        position: relative;
+        display: block;
+        padding: 1em 0;
+      }
+
+      ul {
+        display: none;
+      }
+
+      &:hover ul {
+        background: var(--w-submenu-bg);
+        color: var(--w-submenu-color);
+        animation-name: navFadeIn;
+        animation-duration: .5s;
+        position: absolute;
+        padding: 1em 1.5em;
+        display: block;
+        top: 3.5em;
+        opacity: 1;
+        left: 0;
+
+        &:before {
+          border-bottom: 8px solid var(--w-submenu-bg);
+          border-right: 8px solid transparent;
+          border-left: 8px solid transparent;
+          position: absolute;
+          left: 1.5em;
+          content: "";
+          top: -7px;
+          height: 0;
+          width: 0;
+        }
+
+        .current-menu-ancestor,
+        .current-page-ancestor,
+        .current-page-item,
+        .current-menu-item {
+
+          & > a, & > a:hover {
+            font-weight: bold;
+            color: inherit;
+          }
+        }
+      }
+
+
+      // -----------------------------------------------
+      // Menüpunkt mit Submenü
+
+      &.menu-item-has-children {
+
+        > a:after {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='5' viewBox='0 0 10 5'%3E%3Cpath id='chevron-down' d='M16.968,10.15a.625.625,0,0,1,.813.949l-4.375,3.75a.625.625,0,0,1-.813,0L8.218,11.1a.625.625,0,1,1,.813-.949L13,13.552Z' transform='translate(-8 -10)' fill='%239b2236'/%3E%3C/svg%3E%0A");
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          display: inline-block;
+          margin-left: .35em;
+          height: .575em;
+          width: .575em;
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes navFadeIn {
+  0%   { transform: translate(0, 12%); opacity: 0; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
